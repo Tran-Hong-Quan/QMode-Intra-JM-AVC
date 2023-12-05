@@ -1,3 +1,7 @@
+Add Q Mode to JM
+No modifying Code: https://vcgit.hhi.fraunhofer.de/jvet/JM/-/tree/JM-19.0?ref_type=tags
+
+====================================================================================================
 JM Reference Software README
 ============================
 
