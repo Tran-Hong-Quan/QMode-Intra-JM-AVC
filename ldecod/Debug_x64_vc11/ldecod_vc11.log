@@ -1,0 +1,5 @@
+﻿  intra8x8_pred.c
+  intra8x8_pred_mbaff.c
+  intra8x8_pred_normal.c
+C:\Users\Quan\Disk\Code Projects\JM Avc\ldecod\src\intra8x8_pred.c(1505,13): warning C4101: 'pred_pels': unreferenced local variable
+  ldecod_vc11.vcxproj -> C:\Users\Quan\Disk\Code Projects\JM Avc\bin\ldecod.exe
