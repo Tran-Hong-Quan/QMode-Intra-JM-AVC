@@ -1517,7 +1517,7 @@ static inline int intra8x8_Q_Pred(Macroblock* currMB,    //!< current macroblock
 
     int i;
     imgpel PredPel[25];  // array of predictor pels
-    imgpel PredArray[8][8];  // array of final prediction values
+    imgpel PredArray[16];  // array of final prediction values
     imgpel** imgY = (pl) ? currSlice->dec_picture->imgUV[pl - 1] : currSlice->dec_picture->imgY; // For MB level frame/field coding tools -- set default to imgY
 
     PixelPos pix_a[8];
@@ -1558,7 +1558,7 @@ static inline int intra8x8_Q_Pred(Macroblock* currMB,    //!< current macroblock
         block_available_up_left = pix_d.available;
     }
 
-    if ((!block_available_up) || (!block_available_left) || (!block_available_up_left))
+    if (!block_available_up)
         printf("warning: Intra_8x8_Diagonal_Down_Right prediction mode not allowed at mb %d\n", (int)currSlice->current_mb_nr);
 
     // form predictor pels
@@ -1615,9 +1615,22 @@ static inline int intra8x8_Q_Pred(Macroblock* currMB,    //!< current macroblock
 
     LowPassForIntra8x8Pred(PredPel, block_available_up_left, block_available_up, block_available_left);
 
-    for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; j++)
-            PredArray[i][j] = PredPel[i + 4];
+    PredArray[0] = (imgpel)P_D;
+    PredArray[1] = (imgpel)P_E;
+    PredArray[2] = (imgpel)P_F;
+    PredArray[3] = (imgpel)P_G;
+    PredArray[4] = (imgpel)P_H;
+    PredArray[5] = (imgpel)P_I;
+    PredArray[6] = (imgpel)P_J;
+    PredArray[7] = (imgpel)P_K;
+    PredArray[8] = (imgpel)P_L;
+    PredArray[9] = (imgpel)P_M;
+    PredArray[10] = (imgpel)P_N;
+    PredArray[11] = (imgpel)P_O;
+    PredArray[12] = (imgpel)P_P;
+    PredArray[13] = (imgpel)P_Z;
+    PredArray[14] = (imgpel)P_Z;
+    PredArray[15] = (imgpel)P_Z;
 
     memcpy(&mpr[joff++][ioff], &PredArray[0], 8 * sizeof(imgpel));
     memcpy(&mpr[joff++][ioff], &PredArray[1], 8 * sizeof(imgpel));

@@ -1,5 +1,13 @@
 ﻿  intra8x8_pred.c
   intra8x8_pred_mbaff.c
   intra8x8_pred_normal.c
-C:\Users\Quan\Disk\Code Projects\JM Avc\ldecod\src\intra8x8_pred.c(1505,13): warning C4101: 'pred_pels': unreferenced local variable
-  ldecod_vc11.vcxproj -> C:\Users\Quan\Disk\Code Projects\JM Avc\bin\ldecod.exe
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1607,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1608,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1609,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1610,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1611,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1612,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1613,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1614,42): warning C4022: 'memcpy': pointer mismatch for actual parameter 2
+D:\Clone\QMode-Intra-JM-AVC\ldecod\src\intra8x8_pred.c(1505,13): warning C4101: 'pred_pels': unreferenced local variable
+  ldecod_vc11.vcxproj -> D:\Clone\QMode-Intra-JM-AVC\bin\ldecod.exe

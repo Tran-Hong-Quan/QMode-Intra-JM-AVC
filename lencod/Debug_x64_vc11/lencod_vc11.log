@@ -1,5 +1,2 @@
-﻿  rd_intra_jm.c
-  rd_intra_jm_low.c
-  transform8x8_H444.c
-  Generating Code...
-  lencod_vc11.vcxproj -> C:\Users\Quan\Disk\Code Projects\JM Avc\bin\lencod.exe
+﻿  intra8x8.c
+  lencod_vc11.vcxproj -> D:\Clone\QMode-Intra-JM-AVC\bin\lencod.exe

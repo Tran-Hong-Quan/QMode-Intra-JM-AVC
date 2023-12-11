@@ -485,21 +485,35 @@ static inline void get_i8x8_horup(imgpel **cur_pred, imgpel *PredPel)
 static inline void get_i8x8_Q_Pred(imgpel** cur_pred, imgpel* PredPel)
 {
     //printf("Q_Pred\n");
-    imgpel PredArray[8][8];  // array of final prediction values
+    imgpel PredArray[16];  // array of final prediction values
     
-    for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; j++)
-            PredArray[i][j] = PredPel[i + 4];
-      
+    PredArray[0] = (imgpel)P_D;
+    PredArray[1] = (imgpel)P_E;
+    PredArray[2] = (imgpel)P_F;
+    PredArray[3] = (imgpel)P_G;
+    PredArray[4] = (imgpel)P_H;
+    PredArray[5] = (imgpel)P_I;
+    PredArray[6] = (imgpel)P_J;
+    PredArray[7] = (imgpel)P_K;
+    PredArray[8] = (imgpel)P_L;
+    PredArray[9] = (imgpel)P_M;
+    PredArray[10] = (imgpel)P_N;
+    PredArray[11] = (imgpel)P_O;
+    PredArray[12] = (imgpel)P_P;
+    PredArray[13] = (imgpel)P_Z;
+    PredArray[14] = (imgpel)P_Z;
+    PredArray[15] = (imgpel)P_Z;
 
-    memcpy(*cur_pred++, PredArray[0], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[1], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[2], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[3], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[4], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[5], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[6], 8 * sizeof(imgpel));
-    memcpy(*cur_pred++, PredArray[7], 8 * sizeof(imgpel));
+    imgpel* Pred = &PredArray[0];
+
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred++, 8 * sizeof(imgpel));
+    memcpy(*cur_pred++, Pred  , 8 * sizeof(imgpel));
 }
 
 /*!
