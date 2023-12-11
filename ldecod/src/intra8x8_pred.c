@@ -1600,9 +1600,9 @@ static inline int intra8x8_Q_Pred(Macroblock* currMB,    //!< current macroblock
     PredArray[10] = (imgpel)P_N;
     PredArray[11] = (imgpel)P_O;
     PredArray[12] = (imgpel)P_P;
-    PredArray[13] = (imgpel)P_Z;
-    PredArray[14] = (imgpel)P_Z;
-    PredArray[15] = (imgpel)P_Z;
+    PredArray[13] = (imgpel)P_D;
+    PredArray[14] = (imgpel)P_E;
+    PredArray[15] = (imgpel)P_F;
 
     memcpy((*mb_pred++) + ioff, PredArray[0], 8 * sizeof(imgpel));
     memcpy((*mb_pred++) + ioff, PredArray[1], 8 * sizeof(imgpel));

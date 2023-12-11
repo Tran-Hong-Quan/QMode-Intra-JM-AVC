@@ -500,9 +500,9 @@ static inline void get_i8x8_Q_Pred(imgpel** cur_pred, imgpel* PredPel)
     PredArray[10] = (imgpel)P_N;
     PredArray[11] = (imgpel)P_O;
     PredArray[12] = (imgpel)P_P;
-    PredArray[13] = (imgpel)P_Z;
-    PredArray[14] = (imgpel)P_Z;
-    PredArray[15] = (imgpel)P_Z;
+    PredArray[13] = (imgpel)P_D;
+    PredArray[14] = (imgpel)P_E;
+    PredArray[15] = (imgpel)P_F;
 
     imgpel* Pred = &PredArray[0];
 
